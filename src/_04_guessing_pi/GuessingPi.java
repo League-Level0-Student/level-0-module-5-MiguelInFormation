@@ -1,4 +1,5 @@
 package _04_guessing_pi;
+
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2017
  *    Level 0
@@ -10,20 +11,38 @@ public class GuessingPi {
 	// 1. Make a main method and make sure your program can run
 public static void main(String[] args) {
 	
-}
+
 		// 2. Make a String variable to hold the value of Pi.
 		//    Get the first few digits from http://www.piday.org/million/.
-
+	String pi= "3.1415926535";
 		// 3. Print out the first 3 digits of Pi to the console.
 		//    The first value is "pi.charAt(0)", the second is "pi.charAt(1)", etc.
 		//    Run your program to see how this works.
 
+
+
+	for (int j = 0; j < pi.length(); j++) {
+		//System.out.println(pi.charAt(j));
+		String zeze= JOptionPane.showInputDialog("What is the next digit of pi" );
+		char fly= zeze.charAt(0);
+		if (zeze.equals(pi.charAt(j)+"")) {
+			JOptionPane.showMessageDialog(null,"You got it right");
+
+		}
+		else {
+			JOptionPane.showMessageDialog(null,"YPU FOR IT WRNMG AAHAHAHAHHAHAHHAAHHH!HH!H!!H!!H!H0");
+			break;
+		}
+	}
+	
+	
 		// 9. If you want to give the user more than one chance to guess,
 		//    put a for loop around steps 4-8.
 
 			// 4. Create a for loop that will step through each digit of pi (steps 5-8)
 			//    NOTE: The number of digits in your string will be
-			//       yourStringVariable.length()
+			//       yourStringVariable.length()s
+	
 
 				// 5. Ask the user for the NEXT digit of pi.
 
@@ -39,3 +58,5 @@ public static void main(String[] args) {
 }
 
 
+
+}
