@@ -25,13 +25,14 @@ public class GoofyNames {
 	        	  if (i%2==0) {
 	        		  goofyName += name.substring(i, i+1).toUpperCase();
 	          }
-	        	  else{
+	        	  else{  
+	        		  goofyName += name.substring(i, i+1).toLowerCase();
 	        	  }
 	        	  }
 {
 	        	 
   	        			  
-	        	  System.out.println(temp);
+	        	  System.out.println(goofyName);
 	          }
 			// 4. Create a String variable to store the next character of the name
 			//    using .substring(start, end)
