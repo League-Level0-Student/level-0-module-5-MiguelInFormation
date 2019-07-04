@@ -11,13 +11,39 @@ import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.swing.JApplet;
+import javax.swing.JOptionPane;
 
 public class Code4Life {
 
 	// 1. Ask the user how many hours they spent coding this week.
+	//String jama =	JOptionPane.showInputDialog(null,"who many hours do spend coding everyweek");
 
-	// 2. If it is less than or equal to if 2, tell them to stop watching YouTube and
+	//int hours = Integer.parseInt(jama);
+
+			public static void main(String[] args) {
+		String string =	JOptionPane.showInputDialog(null,"How many hours do you spend codeng?");
+
+		int hours = Integer.parseInt(string);
+				if(hours <= 2) {
+					JOptionPane.showMessageDialog(null,"STAWP WATCHING YOUTUBE!!! LAZY!!!!");
+					playFail();
+			    }
+			    
+			    else if(hours >=3&& hours <=5) {
+			    	JOptionPane.showMessageDialog(null,"YOU SIR ARE A CODING NINJA");
+			    	playGong();
+			    	
+			    }
+			    else if(hours > 5) {
+			    	JOptionPane.showMessageDialog(null,"YOURE A BEASTTTT"); playBatmanTheme();
+			    	
+			    	
+			    }
+
+			}
+	// 2. If it is less than or equal to 2, tell them to stop watching YouTube and
 	// write code instead.
+   
 
 	// 3. If it is greater than or equal to 3 AND less than or equal to 5, tell them
 	// they're a Code Ninja
@@ -26,12 +52,36 @@ public class Code4Life {
 
 	private static void playBatmanTheme() {
 		try {
-			AudioClip sound = JApplet.newAudioClip(Code4Life.class.getResource("batman.wav"));
+			AudioClip sound = JApplet.newAudioClip(Code4Life.class.getResource("Big_Brother_Celebration_Song-4LGvg0GCHWg.wav"));
 			sound.play();
 			Thread.sleep(60002);
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
 	}
+
+
+
+private static void playFail() {
+	try {
+		AudioClip sound = JApplet.newAudioClip(Code4Life.class.getResource("FAIL_SOUND_EFFECT-zpG1Ywmbioc.wav"));
+		sound.play();
+		Thread.sleep(60002);
+	} catch (Exception ex) {
+		ex.printStackTrace();
+	}
+}
+
+
+
+private static void playGong() {
+	try {
+		AudioClip sound = JApplet.newAudioClip(Code4Life.class.getResource("gong_sound_FX-kZ70uUp9eWo.wav"));
+		sound.play();
+		Thread.sleep(60002);
+	} catch (Exception ex) {
+		ex.printStackTrace();
+	}
+}
 
 }
