@@ -22,10 +22,10 @@ public class EvilPolygonsChallenge {
 		
 
 		if (colorChoice==1) {
-			rob.setPenColor(250, 0, 0);
+			rob.setPenColor(255, 0, 0);
 		}
 		else if (colorChoice==2) {
-			rob.setPenColor(0, 250, 0);
+			rob.setPenColor(0, 255, 0);
 		}
 		else if(colorChoice==3) {
 			rob.setPenColor(15, 249, 210);
@@ -52,7 +52,7 @@ public class EvilPolygonsChallenge {
 			rob.move(105);
 		//6. Make it so your shapes do not overlap
 			rob.penUp();
-			rob.move(150);
+			rob.move(5);
 
 		//7. Challenge: add more colors to the Option Dialog.
 	}
